@@ -1,5 +1,7 @@
-#!/usr/bin/env python3
+#!/bin/bash
 
+# Define the Python script as a here document
+python_script=$(cat <<'EOF'
 import random
 
 def random_hex_block(length=4):
@@ -40,3 +42,8 @@ all_addresses = generate_ipv6(patterns)
 # Print the generated addresses
 for idx, address in enumerate(all_addresses):
     print(f"Address {idx + 1}: {address}")
+EOF
+)
+
+# Execute the Python script
+python3 -c "$python_script"
