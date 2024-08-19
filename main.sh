@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
- 
+
 import random
 
 def random_hex_block(length=4):
